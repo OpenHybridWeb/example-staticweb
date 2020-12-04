@@ -9,8 +9,8 @@ components:
   - context: /theme
     kind: git
     spec:
-      - url: https://github.com/OpenHybridWeb/example-component-theme.git
-      - dir: /             # Dir where the content is within repo. Default "/"
+      url: https://github.com/OpenHybridWeb/example-component-theme.git
+      dir: /             # Dir where the content is within repo. Default "/"
       envs:                # Desired environments to deploy to. If missing then all envs are deployed with {env_name}={branch_name}
         - dev: dev         # Each environment defines name of branch to checkout
         - stage: stage
@@ -20,4 +20,4 @@ components:
   - context: /
     kind: git
     spec:
-      - url: https://github.com/OpenHybridWeb/example-component-homepage.git
+      url: https://github.com/OpenHybridWeb/example-component-homepage.git
