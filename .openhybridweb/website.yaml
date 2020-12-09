@@ -7,7 +7,7 @@ defaults:
 # List of components
 components:
   # Common Theme
-  - context: /theme
+  - context: /theme/
     kind: git
     spec:
       url: https://github.com/OpenHybridWeb/example-component-theme.git
