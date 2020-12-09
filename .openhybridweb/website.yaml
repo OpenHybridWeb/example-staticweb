@@ -6,6 +6,11 @@ defaults:
 
 # List of components
 components:
+  # Controller API
+  - context: /_api/
+    kind: service
+    spec:
+      url: http://core-controller
   # Common Theme
   - context: /theme/
     kind: git
