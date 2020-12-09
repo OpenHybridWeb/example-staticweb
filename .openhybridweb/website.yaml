@@ -7,7 +7,7 @@ defaults:
 # List of components
 components:
   # Controller API
-  - context: /_api/
+  - context: /_controller/api/
     kind: service
     spec:
       url: http://core-controller
