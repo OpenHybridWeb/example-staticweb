@@ -13,11 +13,11 @@ components:
       url: http://core-controller:8080
 
   # REST API
-  - context: /api1/*
+  - context: /api1/
     kind: service
     spec:
       url: http://hello-app1:8080
-  - context: /api2/*
+  - context: /api2/
     kind: service
     spec:
       url: http://hello-app2:8080
