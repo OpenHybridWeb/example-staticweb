@@ -17,12 +17,12 @@ components:
     kind: service
     spec:
       url: http://hello-app1:8080
-      envs:
-        - dev: dev
   - context: /api2/*
     kind: service
     spec:
       url: http://hello-app2:8080
+      envs:
+        - dev: prod   # shows that api2 is just in prod env.
 
   # Common Theme
   - context: /theme/
