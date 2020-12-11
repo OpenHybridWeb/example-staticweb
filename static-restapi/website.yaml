@@ -1,0 +1,38 @@
+apiVersion: 1
+# Default settings
+defaults:
+  # List of default environments desired to be deployed to
+  envs: [ dev, prod ]
+
+# List of components
+components:
+  # Controller API
+  - context: /_controller/api/
+    kind: service
+    spec:
+      url: http://core-controller:8080
+
+  # REST API
+  - context: /api1/*
+    kind: service
+    spec:
+      url: http://hello-app1:8080
+      envs:
+        - dev: dev
+  - context: /api2/*
+    kind: service
+    spec:
+      url: http://hello-app2:8080
+
+  # Common Theme
+  - context: /theme/
+    kind: git
+    spec:
+      url: https://github.com/OpenHybridWeb/example-component-theme.git
+
+  # Homepage
+  # Minimalistic definition. Defaults applied. See above
+  - context: /
+    kind: git
+    spec:
+      url: https://github.com/OpenHybridWeb/example-component-homepage.git
