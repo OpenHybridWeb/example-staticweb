@@ -22,7 +22,7 @@ components:
     spec:
       url: http://hello-app2:8080
       envs:
-        - dev: prod   # shows that api2 is just in prod env.
+        - prod: prod   # shows that api2 is just in prod env.
 
   # Common Theme
   - context: /theme/
