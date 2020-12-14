@@ -3,10 +3,11 @@ apiVersion: 1
 defaults:
   # List of default environments desired to be deployed to
   envs: [ dev, stage, prod ]
+  namespacePrefix: "static-"    # namespace will be 'static-web', 'static-stage', 'static-prod'
 
 # List of components
 components:
-  # Controller API
+  # Controller API - useful for webhooks
   - context: /_controller/api/
     kind: service
     spec:
@@ -16,7 +17,7 @@ components:
     kind: git
     spec:
       url: https://github.com/OpenHybridWeb/example-component-theme.git
-      dir: /             # Dir where the content is within repo. Default "/"
+      dir: /               # Dir where the content is within repo. Default "/"
       envs:                # Desired environments to deploy to. If missing then all envs are deployed with {env_name}={branch_name}
         - dev: dev         # Each environment defines name of branch to checkout
         - stage: stage

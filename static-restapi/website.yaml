@@ -3,10 +3,11 @@ apiVersion: 1
 defaults:
   # List of default environments desired to be deployed to
   envs: [ dev, prod ]
+  namespacePrefix: "static-restapi-"    # namespace will be 'static-restapi-web' and 'static-restapi-prod'
 
 # List of components
 components:
-  # Controller API
+  # Controller API - useful for webhooks
   - context: /_controller/api/
     kind: service
     spec:
@@ -22,7 +23,7 @@ components:
     spec:
       url: http://hello-app2:8080
       envs:
-        - prod: prod   # shows that api2 is just in prod env.
+        - dev:          # shows that api2 is just in dev env.
 
   # Common Theme
   - context: /theme/
