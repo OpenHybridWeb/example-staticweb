@@ -3,7 +3,7 @@ apiVersion: 1
 defaults:
   # List of default environments desired to be deployed to
   envs: [ dev, prod ]
-  namespacePrefix: "static-restapi-"    # namespace will be 'static-restapi-web' and 'static-restapi-prod'
+  namespacePrefix: "static-restapi-"    # namespace will be 'static-restapi-dev' and 'static-restapi-prod'
 
 # List of components
 components:
