@@ -17,11 +17,11 @@ components:
   - context: /api1/
     kind: service
     spec:
-      url: http://hello-app1:8080
+      url: http://restapi1:8080
   - context: /api2/
     kind: service
     spec:
-      url: http://hello-app2:8080
+      url: http://restapi2:8080
       envs:
         - dev:          # shows that api2 is just in dev env.
 
