@@ -10,7 +10,7 @@ kubectl -n drupal-restapi-dev create -f components
 
 Drupal starts with installation and needs access to postgres with:
 
-* host=postgres
+* host=postgresql
 * db=drupal_production
 * username=drupal
 * password=drupal
