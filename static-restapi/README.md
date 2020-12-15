@@ -7,9 +7,5 @@ Combine two example static component and rest api
 
 Create REST API manually:
 ```shell
-kubectl -n static-restapi-dev create deployment hello-app1 --image=lkrzyzanek/helloworld-restapi
-kubectl -n static-restapi-dev expose deployment hello-app1 --type=NodePort --port=8080
-
-kubectl -n static-restapi-dev create deployment hello-app2 --image=lkrzyzanek/helloworld-restapi:1.0
-kubectl -n static-restapi-dev expose deployment hello-app2 --type=NodePort --port=8080
+kubectl -n static-restapi-dev create -f components
 ```
