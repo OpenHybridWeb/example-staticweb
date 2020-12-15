@@ -1,0 +1,28 @@
+apiVersion: 1
+# Default settings
+defaults:
+  # List of default environments desired to be deployed to
+  envs: [ dev, prod ]
+  namespacePrefix: "restapi-sso-"    # namespace will be 'restapi-sso-dev' and 'restapi-sso-prod'
+
+# List of components
+components:
+
+  # REST API
+  - context: /api/
+    kind: service
+    spec:
+      url: http://restapi:8080
+      targetContext: /hola/
+
+  # SSO
+  - context: /auth/
+    kind: service
+    spec:
+      url: http://keycloak:8080
+
+  # Controller API - useful for webhooks
+  - context: /_controller/api/
+    kind: service
+    spec:
+      url: http://core-controller:8080
