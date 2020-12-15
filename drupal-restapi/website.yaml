@@ -1,0 +1,26 @@
+apiVersion: 1
+# Default settings
+defaults:
+  # List of default environments desired to be deployed to
+  envs: [ dev, prod ]
+  namespacePrefix: "drupal-restapi-"    # namespace will be 'drupal-restapi-dev' and 'drupal-restapi-prod'
+
+# List of components
+components:
+  # Controller API - useful for webhooks
+  - context: /_controller/api/
+    kind: service
+    spec:
+      url: http://core-controller:8080
+
+  # REST API
+  - context: /api1/
+    kind: service
+    spec:
+      url: http://restapi:8080
+
+  # Drupal
+  - context: /
+    kind: service
+    spec:
+      url: http://drupal:80
