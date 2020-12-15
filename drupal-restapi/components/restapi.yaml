@@ -28,7 +28,7 @@ spec:
         app: restapi
     spec:
       containers:
-        - image: chentex/go-rest-api
+        - image: lkrzyzanek/helloworld-restapi
           name: restapi
           ports:
             - containerPort: 8080

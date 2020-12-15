@@ -9,4 +9,4 @@ argoCD.
 kubectl -n restapi-sso-dev create -f components
 ```
 
-SSO is accessible under `/auth/` context and api under `/api/yellow`.
+SSO is accessible under `/auth/` context and api under `/api/`.

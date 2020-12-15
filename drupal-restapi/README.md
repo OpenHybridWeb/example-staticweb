@@ -15,4 +15,4 @@ Drupal starts with installation and needs access to postgres with:
 * username=drupal
 * password=drupal
 
-Drupal is accessible on root context and API under `/api/yellow`.
+Drupal is accessible on root context and API under `/api/`.
