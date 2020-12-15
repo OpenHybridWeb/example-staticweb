@@ -14,10 +14,11 @@ components:
       url: http://core-controller:8080
 
   # REST API
-  - context: /hola/
+  - context: /api/
     kind: service
     spec:
       url: http://restapi:8080
+      targetContext: /hola/
 
   # Drupal
   - context: /
