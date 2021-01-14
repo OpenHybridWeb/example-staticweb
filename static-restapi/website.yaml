@@ -1,9 +1,10 @@
 apiVersion: 1
-# Default settings
-defaults:
-  # List of default environments desired to be deployed to
-  envs: [ dev, prod ]
-  namespacePrefix: "static-restapi-"    # namespace will be 'static-restapi-dev' and 'static-restapi-prod'
+
+envs:
+  - name: dev
+    namespace: static-restapi-dev
+  - name: prod
+    namespace: static-restapi-prod
 
 # List of components
 components:

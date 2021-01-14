@@ -1,9 +1,10 @@
 apiVersion: 1
-# Default settings
-defaults:
-  # List of default environments desired to be deployed to
-  envs: [ dev, prod ]
-  namespacePrefix: "restapi-sso-"    # namespace will be 'restapi-sso-dev' and 'restapi-sso-prod'
+
+envs:
+  - name: dev
+    namespace: restapi-sso-dev
+  - name: prod
+    namespace: restapi-sso-prod
 
 # List of components
 components:

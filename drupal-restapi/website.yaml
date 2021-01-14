@@ -1,9 +1,10 @@
 apiVersion: 1
-# Default settings
-defaults:
-  # List of default environments desired to be deployed to
-  envs: [ dev, prod ]
-  namespacePrefix: "drupal-restapi-"    # namespace will be 'drupal-restapi-dev' and 'drupal-restapi-prod'
+
+envs:
+  - name: dev
+    namespace: drupal-restapi-dev
+  - name: prod
+    namespace: drupal-restapi-prod
 
 # List of components
 components:
