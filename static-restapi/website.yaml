@@ -1,8 +1,11 @@
 apiVersion: 1
 
 envs:
+  # dev and stage are deployed to same env
   dev:
-    namespace: static-restapi-dev
+    namespace: static-restapi-preprod
+  stage:
+    namespace: static-restapi-preprod
   prod:
     namespace: static-restapi-prod
 
