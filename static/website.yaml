@@ -14,7 +14,8 @@ components:
   - context: /_controller/api/
     kind: service
     spec:
-      url: http://core-controller:8080
+      serviceName: core-controller
+      targetPort: 8080
   # Common Theme
   - context: /theme/
     kind: git

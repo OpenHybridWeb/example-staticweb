@@ -12,17 +12,20 @@ components:
   - context: /_controller/api/
     kind: service
     spec:
-      url: http://core-controller:8080
+      serviceName: core-controller
+      targetPort: 8080
 
   # REST API
   - context: /api1/
     kind: service
     spec:
-      url: http://restapi1:8080
+      serviceName: restapi1
+      targetPort: 8080
   - context: /api2/
     kind: service
     spec:
-      url: http://restapi2:8080
+      serviceName: restapi2
+      targetPort: 8080
       envs:
         dev:          # shows that api2 is just in dev env.
 

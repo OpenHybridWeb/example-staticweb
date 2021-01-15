@@ -12,17 +12,19 @@ components:
   - context: /_controller/api/
     kind: service
     spec:
-      url: http://core-controller:8080
+      serviceName: core-controller
+      targetPort: 8080
 
   # REST API
   - context: /api/
     kind: service
     spec:
-      url: http://restapi:8080
-      targetContext: /hola/
+      serviceName: restapi
+      targetPort: 8080
 
   # Drupal
   - context: /
     kind: service
     spec:
-      url: http://drupal:80
+      serviceName: drupal
+      targetPort: 80
