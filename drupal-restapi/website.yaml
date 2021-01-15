@@ -1,9 +1,9 @@
 apiVersion: 1
 
 envs:
-  - name: dev
+  dev:
     namespace: drupal-restapi-dev
-  - name: prod
+  prod:
     namespace: drupal-restapi-prod
 
 # List of components

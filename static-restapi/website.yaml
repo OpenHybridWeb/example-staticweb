@@ -1,9 +1,9 @@
 apiVersion: 1
 
 envs:
-  - name: dev
+  dev:
     namespace: static-restapi-dev
-  - name: prod
+  prod:
     namespace: static-restapi-prod
 
 # List of components
@@ -24,7 +24,7 @@ components:
     spec:
       url: http://restapi2:8080
       envs:
-        - dev:          # shows that api2 is just in dev env.
+        dev:          # shows that api2 is just in dev env.
 
   # Common Theme
   - context: /theme/
