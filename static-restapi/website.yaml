@@ -8,13 +8,6 @@ envs:
 
 # List of components
 components:
-  # Controller API - useful for webhooks
-  - context: /_controller/api/
-    kind: service
-    spec:
-      serviceName: core-controller
-      targetPort: 8080
-
   # REST API
   - context: /api1/
     kind: service
